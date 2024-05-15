@@ -1,92 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.text-input{
-    border:none;
-    margin-top: 10%;
-    margin-left: 28%;
-    width: 450px;
-    height: 65px;
-    font-size: 50px;
-    caret-color:rgb(245, 245, 19)
+.container {
+  height: 100vh;
 }
 
-.text-input:focus{
-    outline: none;
+.hive-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.found-answers {
+  width: 65%;
+  height: 300px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  margin-right: 150px;
+}
+
+.found-answers-count {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 0 0 20px;
+}
+
+.title {
+  margin-top: 55px;
+  margin-left: 50px;
+  font-size: 35px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.text-input {
+  border: none;
+  margin-top: 4%;
+  margin-left: 24.5%;
+  width: 450px;
+  height: 65px;
+  font-size: 35px;
+  caret-color: rgb(245, 245, 19);
+}
+
+.text-input:focus {
+  outline: none;
 }
 
 .hive {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-  }
-  .hive-cell {
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    width: 235px;
-    height: 205px;
-    padding: 10px;
-  }
-  .hive-cell .cell-fill {
-    cursor: pointer;
-    fill: rgb(209, 209, 209);
-    transition: all 100ms;
-  }
-  .hive .cell-letter {
-    font-weight: 700;
-    font-size: 30px;
-    text-anchor: middle;
-    text-transform: uppercase;
-    pointer-events: none;
-  }
-  .hive-cell:first-child .cell-fill {
-    cursor: pointer;
-    fill: rgb(248, 248, 66);
-    transition: all 100ms;
-  }
-  .hive-cell:nth-child(1) {
-    transform: translate(0, 0);
-  }
-  .hive-cell:nth-child(2) {
-    transform: translate(-75%, -50%);
-  }
-  .hive-cell:nth-child(3) {
-    transform: translate(0, -100%);
-  }
-  .hive-cell:nth-child(4) {
-    transform: translate(75%, -50%);
-  }
-  .hive-cell:nth-child(5) {
-    transform: translate(75%, 50%);
-  }
-  .hive-cell:nth-child(6) {
-    transform: translate(0, 100%);
-  }
-  .hive-cell:nth-child(7) {
-    transform: translate(-75%, 50%);
-  }
-  .hive-actions {
-    margin-top: 1em;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-  }
-  .hive-actions button {
-    transition: all 0.2s ease;
-  }
-  .hive-actions button:active {
-    box-shadow: 0 5px $bl-grey;
-    transform: translateY(4px);
-  }
-  polygon.cell-fill:active {
-    transform: scale(0.9);
-  }
-  polygon.cell-fill {
-    transition: all 1s;
-    transform-origin: 50% 50%;
-  }
+  position: relative;
+  width: 100%;
+  margin-top: 8%;
+}
+.hive-cell {
+  position: absolute;
+  top: 0%;
+  left: 52.5%;
+  width: 100px;
+  height: 90px;
+  padding: 4px;
+}
+.hive-cell .cell-fill {
+  cursor: pointer;
+  fill: rgb(209, 209, 209);
+  transition: all 100ms;
+}
+.hive .cell-letter {
+  font-weight: 700;
+  font-size: 30px;
+  text-anchor: middle;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.hive-cell:first-child .cell-fill {
+  cursor: pointer;
+  fill: rgb(248, 248, 66);
+  transition: all 100ms;
+}
+.hive-cell:nth-child(1) {
+  transform: translate(0, 0);
+}
+.hive-cell:nth-child(2) {
+  transform: translate(-75%, -50%);
+}
+.hive-cell:nth-child(3) {
+  transform: translate(0, -100%);
+}
+.hive-cell:nth-child(4) {
+  transform: translate(75%, -50%);
+}
+.hive-cell:nth-child(5) {
+  transform: translate(75%, 50%);
+}
+.hive-cell:nth-child(6) {
+  transform: translate(0, 100%);
+}
+.hive-cell:nth-child(7) {
+  transform: translate(-75%, 50%);
+}
+.hive-actions {
+  position: absolute;
+  margin-top: 33.5em;
+  top: 0.1%;
+  left: 2%;
+  margin-left: 20.5%;
+}
+
+.hive-actions button {
+  transition: all 0.2s ease;
+  margin-right: 35px;
+  padding: 10px;
+  transform: scale(1);
+  border: solid 2px #dcdcdc;
+  border-radius: 25px;
+}
+.hive-actions button:active {
+  box-shadow: 0 5px rgb(233, 233, 233);
+  transform: translateY(4px);
+}
+polygon.cell-fill:active {
+  transform: scale(0.9);
+}
+polygon.cell-fill {
+  transition: all 1s;
+  transform-origin: 50% 50%;
+}
