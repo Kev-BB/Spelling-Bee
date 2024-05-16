@@ -7,17 +7,34 @@
   height: 100vh;
 }
 
-.hive-container {
+.game-board{
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.hive-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.box{
+  display: flex;
 }
 
 .found-answers {
-  width: 65%;
+  width: 600px;
   height: 300px;
   border: 1px solid #dcdcdc;
   border-radius: 6px;
   margin-right: 150px;
+  margin-top: 100px;
+}
+
+.answers-list{
+margin: 15px 0 0 20px;
 }
 
 .found-answers-count {
@@ -28,7 +45,7 @@
 
 .title {
   margin-top: 55px;
-  margin-left: 50px;
+  margin-left: 55px;
   font-size: 35px;
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
@@ -38,7 +55,7 @@
 .text-input {
   border: none;
   margin-top: 4%;
-  margin-left: 24.5%;
+  margin-left: 23px;
   width: 450px;
   height: 65px;
   font-size: 35px;
@@ -52,12 +69,11 @@
 .hive {
   position: relative;
   width: 100%;
-  margin-top: 8%;
+  margin-top: 25%;
+  left: 17%;
 }
 .hive-cell {
   position: absolute;
-  top: 0%;
-  left: 52.5%;
   width: 100px;
   height: 90px;
   padding: 4px;
@@ -76,7 +92,7 @@
 }
 .hive-cell:first-child .cell-fill {
   cursor: pointer;
-  fill: rgb(248, 248, 66);
+  fill: #f7da21;
   transition: all 100ms;
 }
 .hive-cell:nth-child(1) {
@@ -102,10 +118,7 @@
 }
 .hive-actions {
   position: absolute;
-  margin-top: 33.5em;
-  top: 0.1%;
-  left: 2%;
-  margin-left: 20.5%;
+  margin-top: 26em;
 }
 
 .hive-actions button {
