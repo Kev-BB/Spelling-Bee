@@ -7,7 +7,24 @@
   height: 100vh;
 }
 
-.game-board{
+.title-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.title {
+  flex: 1.5;
+}
+
+.score, .time {
+  flex: 1;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+.game-board {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -20,7 +37,7 @@
   margin-top: 50px;
 }
 
-.box{
+.box {
   display: flex;
 }
 
@@ -33,8 +50,8 @@
   margin-top: 100px;
 }
 
-.answers-list{
-margin: 15px 0 0 20px;
+.answers-list {
+  margin: 15px 0 0 20px;
 }
 
 .found-answers-count {
