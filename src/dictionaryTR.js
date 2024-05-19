@@ -52,3 +52,5 @@ const dictionaryTR = {
     "kareli",
   ],
 };
+
+export default dictionaryTR;

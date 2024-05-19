@@ -1,7 +1,10 @@
-import { useState, useEffect } from "react";
-import dictionaryEN from "./dictionaryEN";
+"use client";
 
-const App = () => {
+import React from "react";
+import { useState, useEffect } from "react";
+import dictionaryTR from "@/dictionaryTR";
+
+const page = () => {
   const STARTING_TIME = 60;
   const STARTING_SCORE = 0;
   const [timerRunning, setTimerRunning] = useState(false);
@@ -37,7 +40,7 @@ const App = () => {
 
   function handleEnter(e) {
     e.preventDefault();
-    if (dictionaryEN.validAnswers.includes(inputValue)) {
+    if (dictionaryTR.validAnswers.includes(inputValue)) {
       if (inputValue.length > 1 && inputValue.length <= 4) {
         setScore((prevscore) => prevscore + 1);
       } else if (inputValue.length > 4 && inputValue.length <= 5) {
@@ -69,16 +72,15 @@ const App = () => {
     textInput.splice(-1, 1);
     setInputValue(textInput.join(""));
   }
-
   return (
     <div className="container">
       <div className="score-board">
-        <h2 className="score">Score: {score}</h2>
-        <h2 className="time">Time: {timeLeft}</h2>
+        <h2 className="score">Puan: {score} </h2>
+        <h2 className="time">Zaman: {timeLeft}</h2>
       </div>
       <div className="game-board">
         <div className="found-answers">
-          <p className="found-answers-count">You've found {count} answers</p>
+          <p className="found-answers-count">{count} Cevap buldunuz.</p>
           <ul className="answers-list">
             {answers.map((answer, id = crypto.randomUUID()) => (
               <li key={id}>{answer}</li>
@@ -89,12 +91,12 @@ const App = () => {
           <input
             typeof="text"
             className="text-input"
+            placeholder="Yazın veya Tıklayın"
             value={inputValue}
-            placeholder="Type or Click"
             onChange={handleInputChange}
           />
           <div className="hive">
-            {dictionaryEN.validLetters.map((letter) => (
+            {dictionaryTR.validLetters.map((letter) => (
               <svg
                 key={letter}
                 className="hive-cell center"
@@ -113,8 +115,8 @@ const App = () => {
             ))}
           </div>
           <div className="hive-actions">
-            <button onClick={handleDelete}>Delete</button>
-            <button onClick={handleEnter}>Enter</button>
+            <button onClick={handleDelete}>Silin</button>
+            <button onClick={handleEnter}>Giriş</button>
           </div>
         </div>
       </div>
@@ -122,4 +124,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default page;
