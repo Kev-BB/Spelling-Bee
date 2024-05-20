@@ -55,7 +55,7 @@ const page = () => {
       setAnswers((prevAnswers) => [...prevAnswers, inputValue]);
       setTimeLeft((prevtime) => prevtime + 15);
     } else {
-      alert("Not in word list");
+      alert("Kelime cevap listesinde bulunmuyor");
     }
   }
 
