@@ -26,7 +26,7 @@ const page = () => {
       };
     }
     if (!timeLeft) {
-      alert(`Your Score ${score}`);
+      alert(`Puanınız ${score}`);
       setTimerRunning(false);
       setTimeLeft(STARTING_TIME);
       setScore(STARTING_SCORE);
