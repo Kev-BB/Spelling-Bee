@@ -44,7 +44,7 @@ prerequisites necessary for running the project.
  
 <h3>Cloning</h3>
 
-How to clone your project
+How to clone the project
 
 ```bash
 git clone project-url-in-github
@@ -52,7 +52,7 @@ git clone project-url-in-github
  
 <h3>Starting</h3>
 
-How to start your project
+How to start the project
 
 ```bash
 npm install
