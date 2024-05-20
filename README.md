@@ -21,8 +21,8 @@
 
 <p align="center">
 
-<img src="Screenshot-desktop.png" alt="Random Image" width="400px">
-<img src="Screenshot-mobile.png" alt="Random Image" width="400px">
+<img src="public/Screenshot-desktop.png" alt="screenshot-desktop" >
+<img src="public/Screenshot-mobile.png" alt="screenshot-mobile" width="400px">
 </p>
  
 <h2 id="technologies">💻 Technologies</h2>
